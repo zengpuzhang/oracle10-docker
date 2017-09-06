@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  oracledb:
+    container_name: "oracledb"
+    build: .
+    restart: "always"
+    volumes:
+      - "./scripts:/scripts"
+    ports:
+      - "49160:22"
+      - "49161:1521"
+      - "49162:8080"
